@@ -1,45 +1,47 @@
-int k;
-if(k==1)
-{
-    /*This is a segment of code*/
-    int state=0;
-    while (state<=10)
-    {
-        state=state+1;
-    };
-    int varA=0x89fa;
-    int varB=06745;
-    int c=1980;
-    bool varC;
-    varA = ((varB + (1-2))+varC)-k;
-    varA = (varA+) ;
-    /*
-    varA = varB + c;
-    varA = ((varB==c)||varB>c);
-    varA = (varB>c);
-    varA = (varB<c);
-    varA = (varB&&c);
-    varA = (varB||c);
-    varA = (!varB);
-    */
-    /*
-    if(varA==varB)
-    {
-        get(varA);
-    };
-    if(varA<>varB)
-    {
+/*int num1,num2,op,ans;
+get(num1);
+get(num2);
+get(op);
 
-    };
-    else
+if(op==0)
+{
+    ans = num1 + num2;
+};
+
+if(op==1)
+{
+    ans = num1 - num2;
+};
+if(op==2)
+{
+    ans = num1 && num2;
+};
+if(op==3)
+{
+    ans = num1 || num2;
+};
+put(ans);*/
+
+
+int num0,num1,num2,num3,out,op;
+num1 = 3333;
+num2 = 6666;
+num3 = 9999;
+op = 1;
+while(op>0)
+{
+    if(op==1)
     {
-        put(varB);
+         out = num1;
     };
-    */
-    /*
-    while(varA==varB)
+    if(op==2)
     {
-        a=b;
+         out = num2;
     };
-    */
+    if(op==2)
+    {
+         out = num3;
+    };
+    put(out);
+    get(op);
 };

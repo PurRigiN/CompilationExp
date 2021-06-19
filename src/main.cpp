@@ -10,9 +10,12 @@
 #include "SemanticAnalysis.h"
 #include "Token.h"
 #include "MyTree.h"
+#include "Quaternion.h"
+#include "InterCode.h"
 
 using namespace std;
-
+int InterCode::tempVarNum=0;
+int InterCode::numOfQua=0;
 int main()
 {
     //token序列
@@ -49,8 +52,14 @@ int main()
             //进行实验3
             MyTree * ASTree=new MyTree();
             if_Seman_succ=SemanticAnalysis::analysis(table,analysis_tree, ASTree);
-            if(if_Seman_succ)
+            if(if_Seman_succ){
                 cout<<"Semantic Analysis succeeded!"<<endl;
+                queue<Quaternion> * quaternions;
+                quaternions=new queue<Quaternion>;
+                bool if_InterC_succ=InterCode::analysis(table,ASTree,quaternions);
+                InterCode::printQuas(quaternions);
+                
+            }
             else
                 cout<<"Semantic Analysis failed!"<<endl;
             delete analysis_tree;
