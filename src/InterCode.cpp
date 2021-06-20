@@ -44,8 +44,10 @@ string InterCode::interCodeR(MyTree * node,queue<Quaternion> * quaternions)
     {
         Quaternion qua;
         qua.op=node->token.attri;
+        //先进行两个节点的四元式生成
         qua.arg1=interCodeR(node->LeftMostChild,quaternions);
         qua.arg2=interCodeR(node->LeftMostChild->getRightSibling(),quaternions);
+        //接着进行该节点四元式的生成
         qua.num=numOfQua;
         numOfQua++;
         qua.result=newTempVar();
