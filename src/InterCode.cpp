@@ -61,24 +61,24 @@ void InterCode::interCodeA(MyTree * node,queue<Quaternion> * quaternions)
     if(node->child_num==0)
         return ;
     Token temp=node->LeftMostChild->token;
-    cout<<"正在处理A"<<endl;
+    // cout<<"正在处理A"<<endl;
     //如果是if语句，处理if语句
     if(temp.attri=="if")
     {
-        cout<<"正在处理if语句"<<endl;
+        // cout<<"正在处理if语句"<<endl;
         interCodeIf(node,quaternions);
         return ;
     }
     //如果是赋值语句，进行处理
     else if(temp.serial==1)
     {
-        cout<<"正在处理赋值语句"<<endl;
+        // cout<<"正在处理赋值语句"<<endl;
         interCodeId(node,quaternions);
         return ;
     }
     else if(temp.attri=="get")
     {
-        cout<<"正在处理Get"<<endl;
+        // cout<<"正在处理Get"<<endl;
         interCodeGet(node,quaternions);
         return ;
     }

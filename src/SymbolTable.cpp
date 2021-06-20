@@ -9,6 +9,17 @@
 using namespace std;
 SymbolTable::SymbolTable(){}
 
+bool SymbolTable::inTable(string id)
+{
+    map<string, Symbol>::iterator  iter;
+    iter=table.find(id);
+    //如果没有的返回假
+    if(iter==table.end())
+        return false;
+    else 
+        return true;
+}
+
 void SymbolTable::addToMap(string id)
 {
     //新建一个symbol

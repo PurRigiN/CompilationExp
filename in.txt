@@ -1,4 +1,5 @@
-/*int num1,num2,op,ans;
+/*
+int num1,num2,op,ans;
 get(num1);
 get(num2);
 get(op);
@@ -20,8 +21,8 @@ if(op==3)
 {
     ans = num1 || num2;
 };
-put(ans);*/
-
+put(ans);
+*/
 
 int num0,num1,num2,num3,out,op;
 num1 = 3333;
@@ -45,3 +46,4 @@ while(op>0)
     put(out);
     get(op);
 };
+

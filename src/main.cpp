@@ -12,6 +12,7 @@
 #include "MyTree.h"
 #include "Quaternion.h"
 #include "InterCode.h"
+#include "ObjectCode.h"
 
 using namespace std;
 int InterCode::tempVarNum=0;
@@ -58,6 +59,8 @@ int main()
                 quaternions=new queue<Quaternion>;
                 bool if_InterC_succ=InterCode::analysis(table,ASTree,quaternions);
                 InterCode::printQuas(quaternions);
+                cout<<"\n生成目标代码\n"<<endl;
+                cout<<ObjectCode::analysis(quaternions);
                 
             }
             else
